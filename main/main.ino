@@ -2,6 +2,8 @@
 #include <HTTPClient.h>
 #include <HardwareSerial.h>
 
+#include "secrets.h"
+
 #define LED_PIN 2
 #define RX_PIN 16 
 #define TX_PIN 17
@@ -18,10 +20,10 @@
 
 #define MAX_PARAMS 10
  
-const char* ssid = "Cortesi Wifi";
-const char* password = "";
-const char* stationID = "KNYENDIC5";
-const char* stationPassword = "";
+const char* ssid = WIFI_SSID;
+const char* password = WIFI_PASSWORD;
+const char* stationID = STATION_ID;
+const char* stationPassword = STATION_PASSWORD;
 
 String* splitString(const String& str, char delimiter) {
     String* result = new String[MAX_PARAMS];
